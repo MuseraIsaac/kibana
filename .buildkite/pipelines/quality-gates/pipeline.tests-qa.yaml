@@ -16,3 +16,8 @@ steps:
       message: Triggered by pipeline.tests.qa.yaml
       branch: $BUILDKITE_BRANCH
       commit: $BUILDKITE_COMMIT
+
+  - wait: ~
+
+  - label: ":cookie: Bake period of 48 hours"
+    command: "sleep 172800"
